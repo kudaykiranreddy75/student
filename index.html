@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+</head> 
+    <title>Main Page</title>
+    <style>
+        body {margin:0;}
+        .navbar {
+  overflow: hidden;
+  background-color: blue;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: right;
+  font: 20px Arial, sans-serif;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+.b1{
+  padding-left: 20px;
+  color: rgb(248, 246, 242);
+   font: 40px Arial, sans-serif;
+   text-align: center;
+}
+    
+       footer {
+    position: fixed;
+    font: 10px Arial, sans-serif;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-radius: 0%;
+    background-color:#333;
+    color: white;
+    text-align: center;
+ }
+        body {
+            font-family: Arial, sans-serif;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(214, 192, 192);
+        }
+        .carousel-inner {
+  position:relative;
+  width: 95%;
+  overflow: hidden;
+  justify-content:center ;
+  align-items: center;
+  left: 30px;
+  border-radius: 1%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+} 
+        .carousel-item {
+  position: relative;
+  display: none;
+  width: 100%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
+.carousel-control-prev, 
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  opacity: 0.5;
+}
+
+.carousel-control-prev:hover, 
+.carousel-control-next:hover {
+  opacity: 0.9;
+}
+
+.carousel-control-prev-icon, 
+.carousel-control-next-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: no-repeat 50%/100% 100%;
+  background-image: none;
+}
+
+.carousel-control-prev-icon {
+  background-color: #f2f2f2;
+}
+
+.carousel-control-next-icon {
+  background-color: #f2f2f2;
+}
+.carousel-control-prev {
+  left: 0;
+}
+
+.carousel-control-next {
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 10%;
+  }
+}
+
+.carousel-indicators {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  left: 0;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  margin-right: 15%;
+  margin-left: 15%;
+  list-style: none;
+}
+.carousel-indicators li {
+  position: relative;
+  flex: 0 1 auto;
+  width: 10px;
+  height: 10px;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #000;
+  background-clip: padding-box;
+  border-top: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-radius: 50%;
+}
+
+.carousel-indicators .active {
+  background-color: #fff;
+}
+
+        </style>
+ <body>
+            
+    <div class="navbar">
+      <img src="https://kssem.edu.in/img/logo.jpg" alt="" width="50px" height="50px">
+        <b class="b1">KSSEM ECE</b>
+        <a href="aboutuss.html">About us</a>
+        <a href="contactus.html">Contact us</a>
+        <a href="homepage.html">Home</a>
+      </div><br><br><br><br><br>
+        <div class="slideshow-container">
+
+<div class="mySlides fade">
+  
+  <img src="./image/clg.jpg" style="width: 1000px;height: 500px;">
+  
+</div>
+
+<div class="mySlides fade">
+ 
+  <img src="./image/stud.jpg" style="width: 1000px;height: 500px;">
+  
+</div>
+
+<div class="mySlides fade">
+ 
+  <img src="./image/hod.jpg" style="width:1000px;height: 500px;">
+
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+</script><br>
+
+
+    <div class="division" style="margin-left: 8px;">
+
+        <a href="Optionfield.html"><button style="height: 120px;width: 410px; text-align: center; padding: 10px;background:radial-gradient(circle,#2cbee3, #ededf0);" ><b>Student Management<br> System</b><br><br>(click here)</button>
+        <a href="#"><button style="height: 120px;width: 410px; text-align: center; padding: 10px;background:radial-gradient(circle, #2cbee3, #ededf0);"><b>Faculty Management<br> System</b><br><br>(click here)</button></a>
+        <a href="#"><button style="height: 120px;width: 410px; text-align: center; padding: 10px;background:radial-gradient(circle, #2cbee3, #ededf0);cursor: pointer;"><b>Marks Management<br> System</b><br><br>(click here)</button></a>
+    </div>
+    <br><br><br>
+    <footer>
+      <p>&copy; ECE Department. All rights reserved.</p>
+    </footer>
+</body>
+</html>
